@@ -22,12 +22,29 @@ class OurProgram{
             //en este caso se muestra otro mensaje en la pantalla
             Console.Write("That number is greater than 5");
         }*/
-        if(userInput > 1 && userInput < 5){
+        
+        //if/else else if
+        /*if(userInput > 1 && userInput < 5){
             Console.Write("That number is between 1 and 5");
         }else if(userInput > 5 && userInput < 10){
             Console.Write("That number is between 5 and 10");
         }else{
             Console.Write("That number is not within our range");
+        }*/
+
+        //A su vez podemos agregar booleans para disparar diferentes resultados usando condicionales
+        bool outOfRange = false; //se utiliza un solo signo = para usar el "igualque"
+        if(userInput > 1 && userInput < 5){
+            Console.Write("That number is between 1 and 5");
+        }else if(userInput > 5 && userInput < 10){ //si el numero que ingrese el usuario es mayor a 1 Y el numero que ingrese el usuario es menor a 10
+            Console.Write("That number is between 5 and 10");
+        }else if(userInput < 1 || userInput > 10){ //si el numero que ingrese el usuario es menor a 1 O el numero que ingrese el usuario es mayor a 10
+            outOfRange = true;
+            if(outOfRange == true){ //se utilizan dos signos de = para comparar un valor con otro
+                Console.Write("that number is out of range");
+            }
+        }else{
+            Console.Write("That number is 1, 5 or 10");
         }
     }
 }
